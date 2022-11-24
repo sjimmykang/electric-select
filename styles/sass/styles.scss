@@ -1,6 +1,6 @@
 @use "partials/variables" as *;
-@use "partials/normalize";
 @use "partials/typography";
+@use "partials/normalize";
 
 body {
     background-color: $waterBlue;

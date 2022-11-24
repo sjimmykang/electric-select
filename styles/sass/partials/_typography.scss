@@ -1,6 +1,7 @@
 @use "variables" as *;
 
-h1 {
-    font-size: 3rem;
-    color: $paleRose;
+html {
+    /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
+    0.1rem is 2px */
+    font-size: 125%;
 }

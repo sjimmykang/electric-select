@@ -1,4 +1,10 @@
 html {
+  /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
+  0.1rem is 2px */
+  font-size: 125%;
+}
+
+html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -231,11 +237,6 @@ li,
 a {
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #f5c8cf;
 }
 
 body {
