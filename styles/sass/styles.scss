@@ -1,2 +1,7 @@
 @use "partials/variables" as *;
 @use "partials/normalize";
+@use "partials/typography";
+
+body {
+    background-color: $waterBlue;
+}

@@ -232,3 +232,12 @@ a {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-size: 3rem;
+  color: #f5c8cf;
+}
+
+body {
+  background-color: #1d81cc;
+}
