@@ -4,6 +4,10 @@ html {
   font-size: 125%;
 }
 
+body {
+  font-family: "Emblema One", cursive;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
