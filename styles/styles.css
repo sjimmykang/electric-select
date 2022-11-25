@@ -1,29 +1,4 @@
 html {
-  /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
-  0.1rem is 2px */
-  font-size: 125%;
-}
-
-body {
-  font-family: "Emblema One", cursive;
-}
-
-h1 {
-  font-size: 5.23rem;
-}
-
-h2 {
-  font-family: "Barlow", sans-serif;
-  font-size: 1.86rem;
-}
-
-nav li {
-  font-family: "Catamaran", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -257,6 +232,31 @@ a {
   margin: 0;
   padding: 0;
   text-decoration: none;
+}
+
+html {
+  /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
+  0.1rem is 2px */
+  font-size: 125%;
+}
+
+body {
+  font-family: "Emblema One", cursive;
+}
+
+h1 {
+  font-size: 5.23rem;
+}
+
+h2 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.86rem;
+}
+
+nav li {
+  font-family: "Catamaran", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 /* Setting up as Mobile first.
