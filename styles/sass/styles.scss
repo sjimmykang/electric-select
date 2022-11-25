@@ -2,6 +2,16 @@
 @use "partials/typography";
 @use "partials/normalize";
 
+
+/* Setting up as Mobile first.
+    Larger screen size will be accomodated with media queries. */
+
+header,
+header div {
+    display: flex;
+}
+
 body {
     background-color: $waterBlue;
 }
+

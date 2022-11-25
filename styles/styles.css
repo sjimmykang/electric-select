@@ -12,6 +12,12 @@ h1 {
   font-size: 2.1rem;
 }
 
+nav li {
+  font-family: "Catamaran", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -245,6 +251,16 @@ li,
 a {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+/* Setting up as Mobile first.
+    Larger screen size will be accomodated with media queries. */
+header,
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body {
