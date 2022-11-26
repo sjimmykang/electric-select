@@ -10,10 +10,23 @@ html { box-sizing: border-box;}
 
 
 // General normalizing
+body,
+header,
 ul,
 li,
-a {
+a, 
+h1,
+h2,
+h3 {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style-type: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
 }

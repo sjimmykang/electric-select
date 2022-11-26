@@ -1,3 +1,4 @@
+//variables partial is in the same level as this partial
 @use "variables" as *;
 
 html {
@@ -12,11 +13,13 @@ html {
 body {
     //Using EmblemaOne as base font. will specify less used fonts per use
     font-family: 'Emblema One', cursive;
+    max-width: 1280px;
 }
 
 //Title font styles
 h1 {
     font-size: 5.23rem; //104.6px
+    color: $waterBlue;
 }
 
 //Sub-Title font styles
@@ -28,6 +31,7 @@ h2 {
 //Nav font styles
 nav li {
     font-family: 'Catamaran', sans-serif;
+    text-transform: uppercase;
     font-size: 0.9rem; //18px
     font-weight: 600; //semi bold
 }
