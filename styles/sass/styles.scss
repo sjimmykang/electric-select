@@ -1,6 +1,7 @@
 //All partials inside partials folder
-@use "partials/variables" as *; 
+//normalize partial first because otherwise my partial scss can be overwritten by the normalize
 @use "partials/normalize";
+@use "partials/variables" as *; 
 @use "partials/typography";
 
 
