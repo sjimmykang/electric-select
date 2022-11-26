@@ -311,8 +311,13 @@ nav li {
 }
 
 header {
-  background-image: url(../../assets/header-alt-mobile.png);
+  /* img url when you select it on SCSS is 2 levels above to get to the assets folder. HOWEVER, when its compiled in css, its only 1 level above.
+  thus you have to make that adjustment yourself.
+  */
+  background-image: url(../assets/header-alt-mobile.png);
+  background-size: cover;
   max-width: 1280px;
+  height: 100vh;
 }
 header div {
   display: -webkit-box;
@@ -381,4 +386,11 @@ button {
 
 .copyRight p {
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  header {
+    background-image: url(../assets/header-alt.png);
+    height: 90vh;
+  }
 }
