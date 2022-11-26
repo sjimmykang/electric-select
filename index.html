@@ -17,65 +17,92 @@
 	<!-- Juno Assignment01 - Electric Select -->
 </head>
 <body>
-	<header>
-
-		<div class="titleContainer">
-			<h1>Electric Select</h1>
-			<h2>best home appliances</h2>
-		</div>
-
-		<!-- flex container for Nav and social media buttons-->
-		<div class="navMenuContainer">
-
-			<!-- flex container for Nav -->
-			<div>
-				<nav>
-					<ul>
+	<header id="home">
+		<div class="wrapper">
+			<div class="titleContainer">
+				<h1>Electric Select</h1>
+				<h3>best home appliances</h2>
+			</div>
+	
+			<!-- flex container for Nav and social media anchors-->
+			<div class="navMenuContainer">
+	
+				<!-- flex container for Nav -->
+				<div>
+					<nav>
+						<ul>
+							<li>
+								<a href="#home">Home</a>
+							</li>
+							<li>
+								<a href="#about">About</a>
+							</li>
+							<li>
+								<a href="">Blog</a>
+							</li>
+							<li>
+								<a href="">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+	
+	
+				<!-- flex container for social media anchor -->
+				<div>
+					<ul class="navMediaContainer">
 						<li>
-							<a href="">Home</a>
+							<a href="">
+								<img src="./assets/instagram.svg" alt="link to instagram page" class="socialMediaIcon">
+							</a>
 						</li>
 						<li>
-							<a href="">About</a>
+							<a href="">
+								<img src="./assets/facebook-f.svg" alt="link to facebook page" class="socialMediaIcon">
+							</a>
 						</li>
 						<li>
-							<a href="">Blog</a>
+							<a href="">
+								<img src="./assets/snapchat.svg" alt="link to snapchat page" class="socialMediaIcon">
+							</a>
 						</li>
 						<li>
-							<a href="">Contact</a>
+							<a href="">
+								<img src="./assets/twitter.svg" alt="link to twitter page" class="socialMediaIcon">
+							</a>
 						</li>
 					</ul>
-				</nav>
-			</div>
-
-
-			<!-- flex container for social media anchor -->
-			<div>
-				<ul class="navMediaContainer">
-					<li>
-						<a href="">
-							<img src="./assets/instagram.svg" alt="link to instagram page" class="socialMediaIcon">
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="./assets/facebook-f.svg" alt="link to facebook page" class="socialMediaIcon">
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="./assets/snapchat.svg" alt="link to snapchat page" class="socialMediaIcon">
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="./assets/twitter.svg" alt="link to twitter page" class="socialMediaIcon">
-						</a>
-					</li>
-				</ul>
+				</div>
 			</div>
 		</div>
 		
 	</header>
+
+	<main>
+		<section id="about" class="about">
+			<div class="wrapper aboutContainer">
+				<div>
+					<h2>New Appliances</h2>
+				</div>
+
+				<div class="imgContainer">
+					<ul>
+						<li>
+							<img src="./assets/gallery-photo-1.jpg" alt="new panasonic microwave">
+						</li>
+						<li>
+							<img src="./assets/gallery-photo-2.jpg" alt="new magimix blender">
+						</li>
+						<li>
+							<img src="./assets/gallery-photo-3.jpg" alt="new delonghi toaster">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		
+	</main>
 	
 </body>
 </html>

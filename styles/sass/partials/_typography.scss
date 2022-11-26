@@ -22,8 +22,14 @@ h1 {
     color: $waterBlue;
 }
 
-//Sub-Title font styles
+//Section Headings font styles
 h2 {
+    font-size: 2.1rem; //42px
+    text-align: center;
+}
+
+//Sub-Title font styles
+h3 {
     font-family: 'Barlow', sans-serif;
     font-size: 1.86rem; //37.2px
 }

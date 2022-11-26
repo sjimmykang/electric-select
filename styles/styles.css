@@ -233,7 +233,8 @@ li,
 a,
 h1,
 h2,
-h3 {
+h3,
+p {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -264,6 +265,11 @@ h1 {
 }
 
 h2 {
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+h3 {
   font-family: "Barlow", sans-serif;
   font-size: 1.86rem;
 }
@@ -277,12 +283,15 @@ nav li {
 
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
-body {
+.wrapper {
   width: 90%;
   margin: 0 auto;
 }
 
-header,
+header {
+  background-image: url(../../assets/header-alt-mobile.png);
+  max-width: 1280px;
+}
 header div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,7 +307,8 @@ nav ul {
 }
 
 .titleContainer,
-.navMenuContainer {
+.navMenuContainer,
+.aboutContainer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -323,4 +333,13 @@ nav ul {
   */
   -webkit-filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
           filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
+}
+
+.imgContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.imgContainer ul li {
+  width: 30%;
 }

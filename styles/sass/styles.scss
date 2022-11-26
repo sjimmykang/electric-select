@@ -7,15 +7,23 @@
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 
-body {
+.wrapper {
     width: 90%;
     margin: 0 auto;
+
 }
 
-header,
-header div {
-    display: flex;
-    flex-wrap: wrap;
+header {
+    // display: flex;
+    // flex-wrap: wrap;
+    background-image: url(../../assets/header-alt-mobile.png);
+    max-width: 1280px;
+    // height: 90vh;
+    
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 nav ul {
@@ -23,7 +31,8 @@ nav ul {
 }
 
 .titleContainer,
-.navMenuContainer {
+.navMenuContainer,
+.aboutContainer {
     flex-direction: column;
 }
 
@@ -41,3 +50,14 @@ nav ul {
     */
     filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
 }
+
+.imgContainer ul{
+    display: flex;
+    li {
+        width: calc(30%);
+    }
+} 
+
+// @media (min-width: 600px) {
+//     background-image: url(../../assets/header-alt.png);
+// }
