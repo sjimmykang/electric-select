@@ -293,7 +293,7 @@ nav li {
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 .wrapper {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
