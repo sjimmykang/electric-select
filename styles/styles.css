@@ -378,3 +378,7 @@ button {
   width: 15vw;
   text-transform: uppercase;
 }
+
+.copyRight p {
+  text-align: center;
+}
