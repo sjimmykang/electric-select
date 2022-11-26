@@ -18,27 +18,36 @@ body {
 
 //Title font styles
 h1 {
+    font-weight: 400;
     font-size: 5.23rem; //104.6px
+    line-height: 4.365rem; //87.3px
     color: $waterBlue;
 }
 
 //Section Headings font styles
 h2 {
     font-size: 2.1rem; //42px
+    font-weight: 400;
     text-align: center;
+    color: $waterBlue;
+    text-transform: uppercase;
 }
 
 //Sub-Title font styles
 h3 {
     font-family: 'Barlow', sans-serif;
+    font-weight: 400;
     font-size: 1.86rem; //37.2px
+    line-height: 1.895rem; //37.9px
+    letter-spacing: 0.015rem; //0.3px
 }
 
 //Nav font styles
 nav li {
     font-family: 'Catamaran', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.9rem; //18px
     font-weight: 600; //semi bold
+    font-size: 0.9rem; //18px
+    line-height: 1.45rem; //29px
+    text-transform: uppercase;
 }
 

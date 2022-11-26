@@ -260,25 +260,34 @@ body {
 }
 
 h1 {
+  font-weight: 400;
   font-size: 5.23rem;
+  line-height: 4.365rem;
   color: #1d81cc;
 }
 
 h2 {
   font-size: 2.1rem;
+  font-weight: 400;
   text-align: center;
+  color: #1d81cc;
+  text-transform: uppercase;
 }
 
 h3 {
   font-family: "Barlow", sans-serif;
+  font-weight: 400;
   font-size: 1.86rem;
+  line-height: 1.895rem;
+  letter-spacing: 0.015rem;
 }
 
 nav li {
   font-family: "Catamaran", sans-serif;
-  text-transform: uppercase;
-  font-size: 0.9rem;
   font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.45rem;
+  text-transform: uppercase;
 }
 
 /* Setting up as Mobile first.
@@ -286,6 +295,19 @@ nav li {
 .wrapper {
   width: 90%;
   margin: 0 auto;
+}
+
+.titleContainer,
+.navMenuContainer,
+.aboutContainer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.titleContainer {
+  width: 40%;
 }
 
 header {
@@ -304,15 +326,6 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.titleContainer,
-.navMenuContainer,
-.aboutContainer {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .navMediaContainer {
@@ -335,11 +348,33 @@ nav ul {
           filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
 }
 
-.imgContainer ul {
+.aboutGalleryContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.imgContainer ul li {
+.aboutGalleryContainer ul li {
   width: 30%;
+}
+
+.aboutExtraContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aboutExtraTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vw;
+}
+
+button {
+  width: 15vw;
+  text-transform: uppercase;
 }

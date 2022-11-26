@@ -13,6 +13,16 @@
 
 }
 
+.titleContainer,
+.navMenuContainer,
+.aboutContainer {
+    flex-direction: column;
+}
+
+.titleContainer {
+    width: calc(40%);
+}
+
 header {
     // display: flex;
     // flex-wrap: wrap;
@@ -30,12 +40,6 @@ nav ul {
     display: flex;
 }
 
-.titleContainer,
-.navMenuContainer,
-.aboutContainer {
-    flex-direction: column;
-}
-
 .navMediaContainer {
     display: flex;
     flex-direction: column;
@@ -51,12 +55,27 @@ nav ul {
     filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
 }
 
-.imgContainer ul{
+.aboutGalleryContainer ul{
     display: flex;
     li {
         width: calc(30%);
     }
 } 
+
+.aboutExtraContainer {
+    display: flex;
+}
+
+.aboutExtraTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+button {
+    width: 15vw;
+    text-transform: uppercase;
+}
 
 // @media (min-width: 600px) {
 //     background-image: url(../../assets/header-alt.png);
