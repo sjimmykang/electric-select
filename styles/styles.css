@@ -234,7 +234,8 @@ a,
 h1,
 h2,
 h3,
-p {
+p,
+button {
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -264,6 +265,7 @@ h1 {
   font-size: 5.23rem;
   line-height: 4.365rem;
   color: #1d81cc;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -308,20 +310,56 @@ p {
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 .wrapper {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+}
+
+header {
+  padding-top: 20px;
+}
+
+.headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .titleContainer,
 .navMenuContainer,
 .aboutContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
+.navMenuButton {
+  /*googled css properties to make button background transparent:
+  https: //stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button
+  */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 70px;
+  padding: 10px;
+}
+
+.navMenuContent {
+  display: none;
+}
+
 .titleContainer {
+  padding: 140px 0 0 0;
   width: 40%;
 }
 
@@ -448,9 +486,19 @@ button {
   text-align: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 801px) {
+  .wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
   header {
     background-image: url(../assets/header-alt.png);
     height: 90vh;
+  }
+  .navMenuButton {
+    display: none;
+  }
+  .navMenuContent {
+    visibility: visible;
   }
 }

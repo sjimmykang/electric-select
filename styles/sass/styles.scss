@@ -9,18 +9,45 @@
     Larger screen size will be accomodated with media queries. */
 
 .wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+}
 
+header {
+    padding-top: 20px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
 }
 
 .titleContainer,
 .navMenuContainer,
 .aboutContainer {
+    display: flex;
     flex-direction: column;
 }
 
+.navMenuButton {
+    /*googled css properties to make button background transparent:
+    https: //stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button
+    */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 70px;
+    //adding padding to increase clickable area for future, while maintaining its size
+    padding: 10px;
+}
+
+.navMenuContent {
+    display: none;
+}
+
 .titleContainer {
+    padding: 140px 0 0 0;
     width: calc(40%);
 }
 
@@ -122,10 +149,29 @@ button {
 }
 
 //Media Queries
-@media (min-width: 600px) {
+@media (min-width: 801px) {
+
+    .wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+
     header {
         background-image: url(../assets/header-alt.png);
         height: 90vh;
+    }
+
+    // .headerContainer {
+    //     flex-direction: row-reverse;
+    // }
+
+    .navMenuButton {
+        display: none;
+        //display none rather than visibility because we dont want the footprint
+    }
+
+    .navMenuContent {
+        visibility: visible;
     }
 
 }

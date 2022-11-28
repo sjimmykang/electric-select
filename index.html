@@ -18,63 +18,72 @@
 </head>
 <body>
 	<header id="home">
-		<div class="wrapper">
-			<div class="titleContainer">
-				<h1>Electric Select</h1>
-				<h3>best home appliances</h2>
-			</div>
-	
+		<div class="wrapper headerContainer">
+			
 			<!-- flex container for Nav and social media anchors-->
 			<div class="navMenuContainer">
 
-				<!-- going for mobile first so add svg, css hide rest into click to show if possibe -->
+				<!-- all svg icons from: https://fontawesome.com/icons -->
+				<button class="navMenuButton">
+					<img src="./assets/bars-solid.svg" alt="dropdown menu icon">
+				</button>
+				<!-- currently none functioning. simply an image -->
+
+
 	
 				<!-- flex container for Nav -->
-				<div>
-					<nav>
-						<ul>
+				<div class="navMenuContent">
+					<div>
+						<nav>
+							<ul>
+								<li>
+									<a href="#home">Home</a>
+								</li>
+								<li>
+									<a href="#about">About</a>
+								</li>
+								<li>
+									<a href="#blog">Blog</a>
+								</li>
+								<li>
+									<a href="">Contact</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+		
+		
+					<!-- flex container for social media anchor -->
+					<div>
+						<ul class="navMediaContainer">
 							<li>
-								<a href="#home">Home</a>
+								<a href="">
+									<img src="./assets/instagram.svg" alt="link to instagram page" class="socialMediaIcon">
+								</a>
 							</li>
 							<li>
-								<a href="#about">About</a>
+								<a href="">
+									<img src="./assets/facebook-f.svg" alt="link to facebook page" class="socialMediaIcon">
+								</a>
 							</li>
 							<li>
-								<a href="#blog">Blog</a>
+								<a href="">
+									<img src="./assets/snapchat.svg" alt="link to snapchat page" class="socialMediaIcon">
+								</a>
 							</li>
 							<li>
-								<a href="">Contact</a>
+								<a href="">
+									<img src="./assets/twitter.svg" alt="link to twitter page" class="socialMediaIcon">
+								</a>
 							</li>
 						</ul>
-					</nav>
+					</div>
 				</div>
-	
-	
-				<!-- flex container for social media anchor -->
-				<div>
-					<ul class="navMediaContainer">
-						<li>
-							<a href="">
-								<img src="./assets/instagram.svg" alt="link to instagram page" class="socialMediaIcon">
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="./assets/facebook-f.svg" alt="link to facebook page" class="socialMediaIcon">
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="./assets/snapchat.svg" alt="link to snapchat page" class="socialMediaIcon">
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="./assets/twitter.svg" alt="link to twitter page" class="socialMediaIcon">
-							</a>
-						</li>
-					</ul>
-				</div>
+			</div>
+
+			<div class="titleContainer">
+				<h1>Electric Select</h1>
+				<h3>best home appliances</h2>
 			</div>
 		</div>
 		
