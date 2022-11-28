@@ -1,0 +1,228 @@
+@use "variables" as *;
+//-------------------- Media Queries ----------------------
+// typography media queries in the typography partial
+@media (min-width: 801px) {
+
+    .wrapper {
+        width: 80%;
+        margin: 8% auto;
+    }
+
+    header {
+        background-image: url(../assets/header-alt.png);
+        background-size: cover;
+        height: 90vh;
+    }
+
+    .headerContainer {
+        width: 90%;
+        margin: 0 0 0 10%;
+    }
+
+    .navMenuContainer {
+        padding-right: 40px;
+
+        li {
+            margin: 0 20px;
+        }
+    }
+
+    .navMediaContainer {
+        padding-top: 10vh;
+
+        li {
+            margin: 8px 0;
+        }
+    }
+
+    .navMenuButton {
+        display: none;
+        //display none rather than visibility because we dont want the footprint
+    }
+
+    .navMenuContent {
+        display: flex;
+    }
+
+    .blogImgContainer {
+        display: flex;
+        width: 50%;
+        align-self: center;
+    }
+
+    .blogTextContainer {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .blogPostContainer1,
+    .blogPostContainer2 {
+        padding: 0;
+    }
+
+    .blogTextWrapper1 p,
+    .blogTextWrapper2 p {
+        width: 100%;
+    }
+
+    .blogTextWrapper1 {
+        padding: 10% 10% 10% 20%;
+    }
+
+    .blogTextWrapper2 {
+        padding: 10% 20% 10% 10%;
+    }
+
+    .galMobileCutOff {
+        display: flex;
+    }
+
+    .aboutGalleryContainer {
+        margin-top: 8%;
+
+        li {
+            flex-basis: 31%;
+        }
+    }
+
+    .blog {
+        background-color: $paleGrey;
+    }
+
+    .blogContainer {
+        padding-bottom: 0;
+    }
+
+    .blogPostContainer1 {
+        flex-direction: row-reverse;
+        padding: 0;
+    }
+
+    .blogPostContainer2 {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .aboutExtraContainer {
+        flex-direction: row;
+        padding-top: 50px;
+    }
+
+    .aboutExtraImgContainer {
+        display: flex;
+        align-self: center;
+        width: 25%;
+    }
+
+    .aboutExtraTextContainer {
+        display: flex;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        align-items: flex-start;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        line-height: 1.45rem; //29px
+        align-self: baseline;
+        margin-top: 15px;
+    }
+
+    .pinkTheme {
+        color: $marine;
+        background-color: $paleRose;
+    }
+
+
+    .additionalLinks {
+        background-color: $lightPink;
+
+        .wrapper {
+            margin: 0 auto;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        h5 {
+            margin: 30px auto;
+        }
+    }
+
+
+    .svgIcons {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact .wrapper {
+        margin: 0 auto;
+    }
+
+    .contactContainer {
+        flex-direction: row;
+    }
+
+    .subscribeContainer {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: flex-start;
+
+        .subButton {
+            padding: 5px 10px;
+        }
+
+        input,
+        .subButton {
+            margin-top: 10px;
+        }
+
+        h4 {
+            align-self: flex-start;
+        }
+
+        form {
+            align-items: flex-start;
+            flex-direction: row;
+            width: 90%;
+
+            input {
+                text-align: left;
+                font-size: 1rem; //20px
+                width: 70%;
+                height: 39px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    .contactBottomContainer {
+        padding: 0;
+        width: 50%;
+    }
+
+    .contactDetailContainer {
+        width: 70%;
+    }
+
+    .line1::after {
+        content: none;
+        white-space: none;
+    }
+
+    .copyRight p {
+        padding: 10px 0;
+    }
+
+    .contactNavContainer {
+        display: flex;
+    }
+
+}

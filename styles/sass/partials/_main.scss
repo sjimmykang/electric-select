@@ -1,0 +1,324 @@
+@use "variables" as *;
+//lightPink hexcode seem a lot darker than in example psd
+
+
+/* Setting up as Mobile first.
+    Larger screen size will be accomodated with media queries. */
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 20px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.titleContainer,
+.navMenuContainer,
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.navMenuButton {
+    /*googled css properties to make button background transparent:
+    https: //stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button
+    */
+    background-color: transparent;
+    width: 70px;
+    //adding padding to increase clickable area for future, while maintaining its size
+    padding: 10px;
+}
+
+.navMenuContent {
+    display: none;
+}
+
+.titleContainer {
+    padding: 140px 0 0 0;
+    width: calc(40%);
+}
+
+header {
+    /* img url when you select it on SCSS is 2 levels above to get to the assets folder. HOWEVER, when its compiled in css, its only 1 level above.
+    thus you have to make that adjustment yourself.
+    */
+    background-image: url(../assets/header-alt-mobile.png);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: $lightPink;
+    height: 100vh;
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+nav ul {
+    display: flex;
+}
+
+.navMediaContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.socialMediaIcon {
+    width: 1rem;
+
+    /* googled and found a stackoverflow page on how to change svg icon colors.
+
+    link: https: //stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element/53336754#53336754
+
+    got the below color using Hex color to CSS filter generator
+    https: //codepen.io/sosuke/pen/Pjoqqp
+    $waterBlue: #1d81cc;
+    */
+    filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
+}
+
+//lightPink background color used in about and additional link sections
+.about,
+.blog {
+    display: flex;
+    background-color: $lightPink;
+}
+
+.galMobileCutOff {
+    display: none;
+}
+
+.aboutGalleryContainer {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    li {
+        flex-basis: 48%;
+    }
+}
+
+.galMobileCutOff {
+    display: none;
+}
+
+.aboutExtraContainer {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutExtraImgContainer {
+    display: flex;
+
+    /* googled css flexbox image stretched and found this website: 
+    https: //techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+
+    this explained that flex container default on align-self is stretch. hence causing this issue
+    */
+    align-self: center;
+    width: 100%;
+}
+
+.aboutExtraTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//Read More button styles
+button {
+    display: flex;
+    /*googled to find width property value of fit-content: 
+    https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
+    */
+    width: fit-content;
+    text-transform: uppercase;
+    color: $lightPink;
+    background-color: $marine;
+    font-family: 'Emblema One', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 25px 30px;
+    margin-top: 40px;
+}
+
+//Blog section styles
+.blogContainer {
+    padding-bottom: 20px;
+}
+
+.blogPostContainer1,
+.blogPostContainer2 {
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogImgContainer {
+    display: flex;
+    width: 100%;
+    align-self: center;
+}
+
+.blogTextContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.blogTextWrapper1,
+.blogTextWrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        width: 90%;
+    }
+}
+
+.additionalLinks .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.additionalLinks {
+    display: flex;
+    background-color: $paleRose;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 10% 0;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    h5 {
+        margin: 30px 0 40px 0;
+    }
+}
+
+.svgIcons {
+    /*Hex to css filter converted
+    $marine: #042259;
+    */
+    filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.contact {
+    display: flex;
+    background-color: $paleGrey;
+    padding: 100px 0;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subscribeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p,
+    input,
+    .subButton {
+        margin-top: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+
+        input {
+            display: flex;
+            border-style: solid;
+            width: 100%;
+            border-color: $paleRose;
+            text-align: center;
+            height: 80px;
+            font-size: 1.3rem;
+        }
+
+
+
+    }
+}
+
+.subButton {
+    color: $marine;
+    background-color: $paleRose;
+}
+
+.contactBottomContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.contactDetailContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+        text-align: left;
+    }
+}
+
+.contactNavContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h4 {
+        text-align: right;
+    }
+}
+
+/*googled line break in css:
+https: //www.educative.io/answers/how-to-add-a-line-break-using-css
+*/
+.line1::after,
+.line2::after,
+.line3::after,
+.line4::after {
+    content: "\a";
+    white-space: pre;
+}
+
+.copyRight p {
+    background-color: $marine;
+    color: $lightPink;
+    padding: 20px;
+    text-align: center;
+}
