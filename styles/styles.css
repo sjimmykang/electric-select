@@ -242,6 +242,11 @@ button {
   list-style-type: none;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 img {
   margin: 0;
   padding: 0;
@@ -307,6 +312,14 @@ p {
   letter-spacing: 0.01rem;
 }
 
+.bodyLinks {
+  font-weight: 400;
+  font-size: 1.56rem;
+  color: #1d81cc;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 .wrapper {
@@ -348,8 +361,6 @@ header {
   https: //stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button
   */
   background-color: transparent;
-  border: none;
-  outline: none;
   width: 70px;
   padding: 10px;
 }
@@ -401,9 +412,13 @@ nav ul {
   /* googled and found a stackoverflow page on how to change svg icon colors.
 
   link: https: //stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element/53336754#53336754
+
+  got the below color using Hex color to CSS filter generator
+  https: //codepen.io/sosuke/pen/Pjoqqp
+  $waterBlue: #1d81cc;
   */
-  -webkit-filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
-          filter: invert(39%) sepia(89%) saturate(543%) hue-rotate(165deg) brightness(95%) contrast(96%);
+  -webkit-filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
+          filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
 }
 
 .aboutGalleryContainer ul {
@@ -450,8 +465,18 @@ nav ul {
 }
 
 button {
-  width: 15vw;
+  /*googled to find width property value of fit-content: 
+  https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
+  */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-transform: uppercase;
+  color: #fcdde2;
+  background-color: #042259;
+  font-family: "Emblema One", cursive;
+  font-weight: 400;
+  padding: 10px 20px;
 }
 
 .blogPostContainer {
@@ -469,6 +494,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .blogTextContainer {
@@ -480,6 +507,20 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.pinkTheme {
+  color: #042259;
+  background-color: #f5c8cf;
+}
+
+.svgIcons {
+  /*Hex to css filter converted
+  $marine: #042259;
+  */
+  -webkit-filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
+          filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
+  width: 40px;
 }
 
 .copyRight p {
@@ -499,6 +540,14 @@ button {
     display: none;
   }
   .navMenuContent {
-    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .blogTextWrapper1 {
+    padding: 20% 10% 20% 20%;
+  }
+  .blogTextWrapper2 {
+    padding: 20% 20% 20% 10%;
   }
 }
