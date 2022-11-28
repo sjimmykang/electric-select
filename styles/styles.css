@@ -264,7 +264,7 @@ html {
 
 body {
   font-family: "Emblema One", cursive;
-  max-width: 1280px;
+  color: #1f2022;
 }
 
 h1 {
@@ -290,6 +290,7 @@ h3 {
   font-size: 1.86rem;
   line-height: 1.895rem;
   letter-spacing: 0.015rem;
+  color: #1f2022;
 }
 
 h4 {
@@ -321,6 +322,11 @@ p {
   font-weight: 400;
   font-size: 1.5rem;
   letter-spacing: 0.01rem;
+  color: #1f2022;
+}
+
+a {
+  color: #1f2022;
 }
 
 @media (min-width: 801px) {
@@ -478,9 +484,9 @@ nav ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.aboutGalleryContainer ul li {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+.aboutGalleryContainer li {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
 }
 
 .galMobileCutOff {
@@ -543,6 +549,10 @@ button {
   font-size: 2rem;
   padding: 25px 30px;
   margin-top: 40px;
+}
+
+.blogContainer {
+  padding-bottom: 20px;
 }
 
 .blogPostContainer1,
@@ -777,7 +787,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
 @media (min-width: 801px) {
   .wrapper {
     width: 80%;
-    margin: 10% auto;
+    margin: 8% auto;
   }
   header {
     background-image: url(../assets/header-alt.png);
@@ -793,9 +803,6 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   }
   .navMenuContainer li {
     margin: 0 20px;
-  }
-  .navMenuContainer a {
-    color: black;
   }
   .navMediaContainer {
     padding-top: 10vh;
@@ -848,12 +855,18 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     display: -ms-flexbox;
     display: flex;
   }
-  .aboutGalleryContainer ul li {
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+  .aboutGalleryContainer {
+    margin-top: 8%;
+  }
+  .aboutGalleryContainer li {
+    -ms-flex-preferred-size: 31%;
+        flex-basis: 31%;
   }
   .blog {
     background-color: #f0f5ff;
+  }
+  .blogContainer {
+    padding-bottom: 0;
   }
   .blogPostContainer1 {
     -webkit-box-orient: horizontal;

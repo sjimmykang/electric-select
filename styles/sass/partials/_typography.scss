@@ -13,7 +13,7 @@ html {
 body {
     //Using EmblemaOne as base font. will specify less used fonts per use
     font-family: 'Emblema One', cursive;
-    max-width: 1280px;
+    color: $darkerGrey;
 }
 
 //Title font styles
@@ -42,6 +42,7 @@ h3 {
     font-size: 1.86rem; //37.2px
     line-height: 1.895rem; //37.9px
     letter-spacing: 0.015rem; //0.3px
+    color: $darkerGrey;
 }
 
 h4 {
@@ -76,6 +77,11 @@ p {
     font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 0.01rem; //0.2px
+    color: $darkerGrey;
+}
+
+a {
+    color: $darkerGrey;
 }
 
 
