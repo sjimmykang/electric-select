@@ -297,6 +297,14 @@ nav li {
   text-transform: uppercase;
 }
 
+p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  letter-spacing: 0.01rem;
+}
+
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 .wrapper {
@@ -364,6 +372,9 @@ nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .aboutGalleryContainer ul li {
   width: 30%;
@@ -375,6 +386,20 @@ nav ul {
   display: flex;
 }
 
+.aboutExtraImgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* googled css flexbox image stretched and found this website: 
+  https: //techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+
+  this explained that flex container default on align-self is stretch. hence causing this issue
+  */
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 25%;
+}
+
 .aboutExtraTextContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,12 +408,40 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50vw;
+  width: 75%;
 }
 
 button {
   width: 15vw;
   text-transform: uppercase;
+}
+
+.blogPostContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.blogImgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.blogTextContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .copyRight p {

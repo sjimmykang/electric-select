@@ -63,6 +63,8 @@ nav ul {
 
 .aboutGalleryContainer ul{
     display: flex;
+    justify-content: space-between;
+
     li {
         width: calc(30%);
     }
@@ -72,20 +74,54 @@ nav ul {
     display: flex;
 }
 
+.aboutExtraImgContainer {
+    display: flex;
+
+    /* googled css flexbox image stretched and found this website: 
+    https: //techstacker.com/how-to-prevent-image-stretching-with-flexbox/
+
+    this explained that flex container default on align-self is stretch. hence causing this issue
+    */
+    align-self: center;
+    width: 25%;
+}
+
 .aboutExtraTextContainer {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 75%;
 }
 
+//Read Me button styles
 button {
     width: 15vw;
     text-transform: uppercase;
 }
 
+//Blog section styles
+.blogPostContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.blogImgContainer {
+    display: flex;
+    width: 50%;
+}
+
+.blogTextContainer {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+
+
 .copyRight p {
     text-align: center;
 }
+
+//Media Queries
 @media (min-width: 600px) {
     header {
         background-image: url(../assets/header-alt.png);
