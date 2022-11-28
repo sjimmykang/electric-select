@@ -296,7 +296,6 @@ h4 {
   font-weight: 400;
   font-size: 2.5rem;
   color: #1d81cc;
-  line-height: 2.8rem;
   text-transform: uppercase;
 }
 
@@ -320,9 +319,7 @@ nav li {
 p {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  text-align: center;
   font-size: 1.5rem;
-  line-height: 1.45rem;
   letter-spacing: 0.01rem;
 }
 
@@ -333,6 +330,7 @@ p {
     text-align: center;
     color: #1d81cc;
     text-transform: uppercase;
+    padding: 0px 0 15px 0;
   }
   .aboutExtraTextContainer h2,
 .blogTextContainer h2 {
@@ -347,10 +345,16 @@ p {
   }
   p {
     font-size: 1rem;
+    line-height: 1.45rem;
   }
 }
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 .wrapper {
   width: 90%;
   margin: 0 auto;
@@ -412,7 +416,6 @@ header {
   background-position: right;
   background-repeat: no-repeat;
   background-color: #fcdde2;
-  max-width: 1280px;
   height: 100vh;
 }
 header div {
@@ -539,6 +542,7 @@ button {
   font-weight: 400;
   font-size: 2rem;
   padding: 25px 30px;
+  margin-top: 40px;
 }
 
 .blogPostContainer1,
@@ -585,6 +589,10 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.blogTextWrapper1 p,
+.blogTextWrapper2 p {
+  width: 90%;
 }
 
 .additionalLinks .wrapper {
@@ -664,6 +672,11 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+.subscribeContainer p,
+.subscribeContainer input,
+.subscribeContainer .subButton {
+  margin-top: 20px;
+}
 .subscribeContainer form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -678,6 +691,7 @@ button {
   margin: 0;
   padding: 0;
   text-align: left;
+  width: 100%;
 }
 .subscribeContainer form input {
   display: -webkit-box;
@@ -686,11 +700,9 @@ button {
   border-style: solid;
   width: 100%;
   border-color: #f5c8cf;
-}
-.subscribeContainer form p,
-.subscribeContainer form input,
-.subscribeContainer form button {
-  margin-top: 20px;
+  text-align: center;
+  height: 80px;
+  font-size: 1.3rem;
 }
 
 .subButton {
@@ -724,7 +736,11 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.contactDetailContainer .pContainer {
+.contactDetailContainer p {
+  text-align: left;
+}
+
+.contactNavContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,11 +748,10 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.contactDetailContainer p {
-  text-align: left;
-}
-
 .contactNavContainer h4 {
   text-align: right;
 }
@@ -756,6 +771,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   background-color: #042259;
   color: #fcdde2;
   padding: 20px;
+  text-align: center;
 }
 
 @media (min-width: 801px) {
@@ -766,8 +782,26 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   header {
     background-image: url(../assets/header-alt.png);
     background-size: cover;
-    background-position: right;
     height: 90vh;
+  }
+  .headerContainer {
+    width: 90%;
+    margin: 0 0 0 10%;
+  }
+  .navMenuContainer {
+    padding-right: 40px;
+  }
+  .navMenuContainer li {
+    margin: 0 20px;
+  }
+  .navMenuContainer a {
+    color: black;
+  }
+  .navMediaContainer {
+    padding-top: 10vh;
+  }
+  .navMediaContainer li {
+    margin: 8px 0;
   }
   .navMenuButton {
     display: none;
@@ -795,6 +829,14 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .blogPostContainer1,
+.blogPostContainer2 {
+    padding: 0;
+  }
+  .blogTextWrapper1 p,
+.blogTextWrapper2 p {
+    width: 100%;
+  }
   .blogTextWrapper1 {
     padding: 10% 10% 10% 20%;
   }
@@ -818,18 +860,21 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    padding: 0;
   }
   .blogPostContainer2 {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 0;
   }
   .aboutExtraContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 50px;
   }
   .aboutExtraImgContainer {
     display: -webkit-box;
@@ -860,6 +905,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     line-height: 1.45rem;
     -ms-flex-item-align: baseline;
         align-self: baseline;
+    margin-top: 15px;
   }
   .pinkTheme {
     color: #042259;
@@ -867,6 +913,9 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   }
   .additionalLinks {
     background-color: #fcdde2;
+  }
+  .additionalLinks .wrapper {
+    margin: 0 auto;
   }
   .additionalLinks ul {
     display: -webkit-box;
@@ -884,6 +933,9 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     width: 50px;
     height: 50px;
   }
+  .contact .wrapper {
+    margin: 0 auto;
+  }
   .contactContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -899,10 +951,37 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
         -ms-flex-direction: column;
             flex-direction: column;
     width: 50%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .subscribeContainer .subButton {
+    padding: 5px 10px;
+  }
+  .subscribeContainer input,
+.subscribeContainer .subButton {
+    margin-top: 10px;
   }
   .subscribeContainer h4 {
     -ms-flex-item-align: start;
         align-self: flex-start;
+  }
+  .subscribeContainer form {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 90%;
+  }
+  .subscribeContainer form input {
+    text-align: left;
+    font-size: 1rem;
+    width: 70%;
+    height: 39px;
+    padding-left: 10px;
   }
   .contactBottomContainer {
     padding: 0;
@@ -917,5 +996,10 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   }
   .copyRight p {
     padding: 10px 0;
+  }
+  .contactNavContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
