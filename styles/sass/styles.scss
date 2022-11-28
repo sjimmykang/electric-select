@@ -235,6 +235,34 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+        input {
+            display: flex;
+            border-style: solid;
+            width: 100%;
+            border-color: $paleRose;
+        }
+
+        p,
+        input,
+        button {
+            margin-top: 20px;
+        }
+
+    }
+}
+
+.subButton {
+    color: $marine;
+    background-color: $paleRose;
 }
 
 .contactBottomContainer {

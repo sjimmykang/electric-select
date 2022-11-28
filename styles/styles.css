@@ -664,6 +664,39 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+.subscribeContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.subscribeContainer form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-style: solid;
+  width: 100%;
+  border-color: #f5c8cf;
+}
+.subscribeContainer form p,
+.subscribeContainer form input,
+.subscribeContainer form button {
+  margin-top: 20px;
+}
+
+.subButton {
+  color: #042259;
+  background-color: #f5c8cf;
+}
 
 .contactBottomContainer {
   display: -webkit-box;
