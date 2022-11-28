@@ -841,7 +841,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   header {
     background-image: url(../assets/header-alt.png);
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
   }
   .headerContainer {
     width: 90%;
