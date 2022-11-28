@@ -97,8 +97,8 @@ nav ul {
 
 //lightPink background color used in about and additional link sections
 .about,
-.blog,
-.additionalLinks {
+.blog {
+    display: flex;
     background-color: $lightPink;
 }
 
@@ -121,6 +121,7 @@ nav ul {
 }
 
 .aboutExtraContainer {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -160,8 +161,10 @@ button {
 }
 
 //Blog section styles
+
 .blogPostContainer1,
 .blogPostContainer2 {
+    padding: 70px 0;
     display: flex;
     flex-direction: column;
 }
@@ -185,11 +188,25 @@ button {
     align-items: center;
 }
 
-.additionalLinks ul {
+.additionalLinks .wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    // align-items: center;
+}
+
+.additionalLinks {
+    display: flex;
+    background-color: $paleRose;
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 10% 0;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    h5 {
+        margin: 30px 0 40px 0;
+    }
 }
 
 .svgIcons {
@@ -202,10 +219,69 @@ button {
     margin: 0 auto;
 }
 
-//body link typography css in typography partial
+.contact {
+    display: flex;
+    background-color: $paleGrey;
+    padding: 100px 0;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.subscribeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactBottomContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    justify-content: space-between;
+}
+
+.contactDetailContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .pContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+.contactNavContainer {
+
+    h4 {
+        text-align: right;
+    }
+}
+
+/*googled line break in css:
+https: //www.educative.io/answers/how-to-add-a-line-break-using-css
+*/
+.line1::after,
+.line2::after,
+.line3::after,
+.line4::after {
+    content: "\a";
+    white-space: pre;
+}
+
 
 .copyRight p {
-    text-align: center;
+    background-color: $marine;
+    color: $lightPink;
+    padding: 20px;
 }
 
 //-------------------- Media Queries ----------------------
@@ -214,7 +290,7 @@ button {
 
     .wrapper {
             width: 80%;
-            margin: 0 auto;
+            margin: 10% auto;
         }
 
     header {
@@ -310,13 +386,54 @@ button {
     }
 
     
-    .additionalLinks ul {
-        display: flex;
-        flex-direction: row;
+    .additionalLinks {
+        background-color: $lightPink;
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        h5 {
+            margin: 30px auto;
+        }
     }
-    
+
+
     .svgIcons {
         width: 50px;
         height: 50px;
     }
+
+    .contactContainer {
+        flex-direction: row;
+    }
+
+    .subscribeContainer {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        h4 {
+            align-self: flex-start;
+        }
+    }
+
+    .contactBottomContainer {
+        padding: 0;
+        width: 50%;
+    }
+
+    .contactDetailContainer {
+        width: 70%;
+    }
+
+    .line1::after {
+        content: none;
+        white-space: none;
+    }
+
+    .copyRight p {
+        padding: 10px 0;
+    }
+
 }

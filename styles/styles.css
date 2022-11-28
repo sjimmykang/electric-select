@@ -281,6 +281,7 @@ h2 {
   text-align: center;
   color: #1d81cc;
   text-transform: uppercase;
+  padding: 80px 0;
 }
 
 h3 {
@@ -293,14 +294,15 @@ h3 {
 
 h4 {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   color: #1d81cc;
+  line-height: 2.8rem;
   text-transform: uppercase;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 2.56rem;
+  font-size: 2.5rem;
   color: #1d81cc;
   text-align: center;
   text-transform: uppercase;
@@ -318,7 +320,8 @@ nav li {
 p {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
   line-height: 1.45rem;
   letter-spacing: 0.01rem;
 }
@@ -335,8 +338,15 @@ p {
 .blogTextContainer h2 {
     text-align: left;
   }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.45rem;
+  }
   h5 {
     font-size: 1.56rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }
 /* Setting up as Mobile first.
@@ -444,8 +454,10 @@ nav ul {
 }
 
 .about,
-.blog,
-.additionalLinks {
+.blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #fcdde2;
 }
 
@@ -473,6 +485,7 @@ nav ul {
 }
 
 .aboutExtraContainer {
+  padding-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,6 +543,7 @@ button {
 
 .blogPostContainer1,
 .blogPostContainer2 {
+  padding: 70px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -573,6 +587,21 @@ button {
           align-items: center;
 }
 
+.additionalLinks .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.additionalLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f5c8cf;
+}
 .additionalLinks ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -581,9 +610,14 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 10% 0;
+  width: 100%;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+.additionalLinks h5 {
+  margin: 30px 0 40px 0;
 }
 
 .svgIcons {
@@ -597,14 +631,104 @@ button {
   margin: 0 auto;
 }
 
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f0f5ff;
+  padding: 100px 0;
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subscribeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactBottomContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactDetailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contactDetailContainer .pContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactDetailContainer p {
+  text-align: left;
+}
+
+.contactNavContainer h4 {
+  text-align: right;
+}
+
+/*googled line break in css:
+https: //www.educative.io/answers/how-to-add-a-line-break-using-css
+*/
+.line1::after,
+.line2::after,
+.line3::after,
+.line4::after {
+  content: "\a";
+  white-space: pre;
+}
+
 .copyRight p {
-  text-align: center;
+  background-color: #042259;
+  color: #fcdde2;
+  padding: 20px;
 }
 
 @media (min-width: 801px) {
   .wrapper {
     width: 80%;
-    margin: 0 auto;
+    margin: 10% auto;
   }
   header {
     background-image: url(../assets/header-alt.png);
@@ -708,6 +832,9 @@ button {
     color: #042259;
     background-color: #f5c8cf;
   }
+  .additionalLinks {
+    background-color: #fcdde2;
+  }
   .additionalLinks ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -717,8 +844,45 @@ button {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .additionalLinks h5 {
+    margin: 30px auto;
+  }
   .svgIcons {
     width: 50px;
     height: 50px;
+  }
+  .contactContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .subscribeContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+  .subscribeContainer h4 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .contactBottomContainer {
+    padding: 0;
+    width: 50%;
+  }
+  .contactDetailContainer {
+    width: 70%;
+  }
+  .line1::after {
+    content: none;
+    white-space: none;
+  }
+  .copyRight p {
+    padding: 10px 0;
   }
 }
