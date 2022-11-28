@@ -271,8 +271,7 @@ body {
 
 h1 {
   font-weight: 400;
-  font-size: 4rem;
-  line-height: 4.365rem;
+  font-size: 2rem;
   color: #1d81cc;
   text-transform: uppercase;
 }
@@ -289,22 +288,21 @@ h2 {
 h3 {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.895rem;
+  font-size: 0.8rem;
   letter-spacing: 0.015rem;
   color: #1f2022;
 }
 
 h4 {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #1d81cc;
   text-transform: uppercase;
 }
 
 h5 {
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color: #1d81cc;
   text-align: center;
   text-transform: uppercase;
@@ -322,9 +320,14 @@ nav li {
 p {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.01rem;
   color: #1f2022;
+}
+
+.navMenuContent a {
+  font-size: 0.8rem;
+  padding: 0;
 }
 
 a {
@@ -346,20 +349,69 @@ button {
   background-color: #042259;
   font-family: "Emblema One", cursive;
   font-weight: 400;
-  font-size: 2rem;
-  padding: 25px 30px;
+  font-size: 1.5rem;
+  padding: 15px 20px;
   margin-top: 40px;
+  cursor: pointer;
 }
 
+.readMoreButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*googled to find width property value of fit-content: 
+  https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
+  */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  color: #fcdde2;
+  background-color: #042259;
+  font-family: "Emblema One", cursive;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 401px) {
+  h1 {
+    font-size: 2.7rem;
+    line-height: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.895rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  h5 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .navMenuContent a {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
 @media (min-width: 601px) {
   h1 {
-    font-size: 5.23rem;
+    font-size: 4rem;
+    line-height: 4.365rem;
   }
   h2 {
     font-size: 2.4rem;
+    text-align: center;
   }
   h3 {
-    font-size: 1.86rem;
+    font-size: 1.4rem;
   }
   h4 {
     font-size: 1.8rem;
@@ -367,15 +419,34 @@ button {
   p {
     font-size: 1.2rem;
   }
+  .navMenuContent a {
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  button {
+    font-size: 1.8rem;
+    padding: 20px 30px;
+  }
+  .readMoreButton {
+    font-size: 1.8rem;
+    padding: 20px 30px;
+    line-height: 1.45rem;
+    margin-top: 15px;
+  }
 }
 @media (min-width: 801px) {
+  h1 {
+    font-size: 5.23rem;
+  }
   h2 {
     font-size: 2.1rem;
     font-weight: 400;
-    text-align: center;
     color: #1d81cc;
     text-transform: uppercase;
     padding: 0px 0 15px 0;
+  }
+  h3 {
+    font-size: 1.86rem;
   }
   .aboutExtraTextContainer h2,
 .blogTextContainer h2 {
@@ -391,6 +462,22 @@ button {
   p {
     font-size: 1rem;
     line-height: 1.45rem;
+  }
+  button {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    line-height: 1.45rem;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+    margin-top: 15px;
+  }
+  .readMoreButton {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  .subButton {
+    padding: 5px 10px;
+    margin-top: 10px;
   }
   .pinkTheme {
     color: #042259;
@@ -497,15 +584,8 @@ input:checked ~ .navMenuContent {
   right: 5%;
   top: 82px;
   z-index: 10;
-  padding: 30px;
+  padding: 10px;
   border: 4px solid #f5c8cf;
-}
-
-.navMenuContainer {
-  padding-right: 40px;
-}
-.navMenuContainer li {
-  margin: 0 20px;
 }
 
 .navMenuContent ul {
@@ -517,9 +597,8 @@ input:checked ~ .navMenuContent {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.navMenuContent ul a {
-  font-size: 1rem;
-  padding: 10px 0;
+.navMenuContent ul li {
+  padding: 20px 10px;
 }
 
 .navMediaContainer {
@@ -542,6 +621,7 @@ input:checked ~ .navMenuContent {
 
 .socialMediaIcon {
   width: 2rem;
+  height: 2rem;
   /* googled and found a stackoverflow page on how to change svg icon colors.
 
   link: https: //stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element/53336754#53336754
@@ -629,7 +709,7 @@ input:checked ~ .navMenuContent {
 
 .blogPostContainer1,
 .blogPostContainer2 {
-  padding: 70px 0;
+  padding: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,6 +764,7 @@ input:checked ~ .navMenuContent {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-top: 5%;
 }
 
 .additionalLinks {
@@ -716,8 +797,8 @@ input:checked ~ .navMenuContent {
   */
   -webkit-filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
           filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
 }
 
@@ -755,7 +836,6 @@ input:checked ~ .navMenuContent {
           align-items: center;
 }
 .subscribeContainer p,
-.subscribeContainer input,
 .subscribeContainer .subButton {
   margin-top: 20px;
 }
@@ -775,7 +855,8 @@ input:checked ~ .navMenuContent {
   text-align: left;
   width: 100%;
 }
-.subscribeContainer form input {
+.subscribeContainer input {
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,7 +916,12 @@ input:checked ~ .navMenuContent {
           justify-content: space-between;
 }
 .contactNavContainer h4 {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /*googled line break in css:
@@ -845,6 +931,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
 .line2::after,
 .line3::after,
 .line4::after {
+  line-break: strict;
   content: "\a";
   white-space: pre;
 }
@@ -856,6 +943,23 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   text-align: center;
 }
 
+@media (min-width: 601px) {
+  input:checked ~ .navMenuContent {
+    padding: 10px;
+  }
+  .blogPostContainer1,
+.blogPostContainer2 {
+    padding: 50px 0;
+  }
+  .socialMediaIcon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .svgIcons {
+    height: 100px;
+    width: 100px;
+  }
+}
 @media (min-width: 801px) {
   .wrapper {
     width: 80%;
@@ -890,6 +994,9 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   .navMediaContainer a {
     padding: 0px 0;
   }
+  .navMenuContent ul li {
+    padding: 0;
+  }
   .navMenuButton {
     display: none;
   }
@@ -902,14 +1009,13 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     display: -ms-flexbox;
     display: flex;
   }
+  input:checked ~ .navMenuContent {
+    padding: 30px;
+  }
   .navMenuContent ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-  }
-  .navMenuContent ul a {
-    font-size: 1rem;
-    padding: 0;
   }
   .navMediaContainer {
     -webkit-box-orient: vertical;
@@ -918,7 +1024,9 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
             flex-direction: column;
   }
   .socialMediaIcon {
-    width: 1.6rem;
+    width: calc(2rem + 6px);
+    height: calc(2rem + 6px);
+    padding: 6px;
   }
   .blogImgContainer {
     display: -webkit-box;
@@ -1014,15 +1122,8 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  button {
-    font-size: 1rem;
-    padding: 10px 20px;
-    line-height: 1.45rem;
-    -ms-flex-item-align: baseline;
-        align-self: baseline;
-    margin-top: 15px;
-  }
   .additionalLinks {
+    margin-top: 0;
     background-color: #fcdde2;
   }
   .additionalLinks .wrapper {
@@ -1066,13 +1167,6 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .subscribeContainer .subButton {
-    padding: 5px 10px;
-  }
-  .subscribeContainer input,
-.subscribeContainer .subButton {
-    margin-top: 10px;
-  }
   .subscribeContainer h4 {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -1101,16 +1195,14 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   .contactDetailContainer {
     width: 70%;
   }
-  .line1::after {
-    content: none;
-    white-space: none;
-  }
   .copyRight p {
     padding: 10px 0;
   }
-  .contactNavContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+}
+@media (min-width: 1041px) {
+  .line1::after,
+.line3::after {
+    content: none;
+    white-space: none;
   }
 }

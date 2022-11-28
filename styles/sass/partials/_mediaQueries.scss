@@ -3,6 +3,27 @@
 
 // typography media queries in the typography partial
 
+@media (min-width:601px) {
+    input:checked~.navMenuContent {
+            padding: 10px;
+    }
+
+    .blogPostContainer1,
+    .blogPostContainer2 {
+        padding: 50px 0;
+    }
+
+    .socialMediaIcon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .svgIcons {
+        height: 100px;
+        width: 100px;
+    }
+}
+
 @media (min-width: 801px) {
 
     .wrapper {
@@ -47,6 +68,12 @@
         }
     }
 
+    .navMenuContent ul {
+    li {
+        padding: 0;
+    }
+}
+
     .navMenuButton {
         display: none;
         //display none rather than visibility because we dont want the footprint
@@ -61,14 +88,12 @@
         display: flex;
     }
 
+    input:checked~.navMenuContent {
+        padding: 30px;
+    }
+
     .navMenuContent ul {
-
         justify-content: space-between;
-
-        a {
-            font-size: 1rem;
-            padding: 0;
-        }
     }
 
     .navMediaContainer {
@@ -76,9 +101,12 @@
     }
 
     .socialMediaIcon {
-        // increased icon size bit more than the psd for easier clicking
-        width: 1.6rem;
+        width: calc(2rem + 6px);
+        height: calc(2rem + 6px);
+        padding: 6px;
     }
+
+
 
     .blogImgContainer {
         display: flex;
@@ -160,15 +188,8 @@
         align-items: flex-start;
     }
 
-    button {
-        font-size: 1rem;
-        padding: 10px 20px;
-        line-height: 1.45rem; //29px
-        align-self: baseline;
-        margin-top: 15px;
-    }
-
     .additionalLinks {
+        margin-top: 0;
         background-color: $lightPink;
 
         .wrapper {
@@ -184,7 +205,6 @@
             margin: 30px auto;
         }
     }
-
 
     .svgIcons {
         width: 50px;
@@ -204,15 +224,6 @@
         flex-direction: column;
         width: 50%;
         align-items: flex-start;
-
-        .subButton {
-            padding: 5px 10px;
-        }
-
-        input,
-        .subButton {
-            margin-top: 10px;
-        }
 
         h4 {
             align-self: flex-start;
@@ -242,17 +253,15 @@
         width: 70%;
     }
 
-    .line1::after {
-        content: none;
-        white-space: none;
-    }
-
     .copyRight p {
         padding: 10px 0;
     }
+}
 
-    .contactNavContainer {
-        display: flex;
+@media (min-width: 1041px) {
+    .line1::after,
+    .line3::after {
+        content: none;
+        white-space: none;
     }
-
 }

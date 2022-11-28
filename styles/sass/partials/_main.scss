@@ -32,8 +32,6 @@ header {
     flex-direction: column;
 }
 
-
-
 header {
     /* img url when you select it on SCSS is 2 levels above to get to the assets folder. HOWEVER, when its compiled in css, its only 1 level above.
     thus you have to make that adjustment yourself.
@@ -94,26 +92,17 @@ input:checked~.navMenuContent {
     right: 5%;
     top: 82px;
     z-index: 10;
-    padding: 30px;
+    padding: 10px;
     border: 4px solid $paleRose;
-}
-
-
-.navMenuContainer {
-    padding-right: 40px;
-
-    li {
-        margin: 0 20px;
-    }
 }
 
 .navMenuContent ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    a {
-        font-size: 1rem;
-        padding: 10px 0;
+
+    li {
+        padding: 20px 10px;
     }
 }
 
@@ -127,9 +116,10 @@ input:checked~.navMenuContent {
 
 }
 
-
 .socialMediaIcon {
+    // increased icon size bit more than the psd for easier clicking
     width: 2rem;
+    height: 2rem;
 
     /* googled and found a stackoverflow page on how to change svg icon colors.
 
@@ -200,7 +190,7 @@ input:checked~.navMenuContent {
 
 .blogPostContainer1,
 .blogPostContainer2 {
-    padding: 70px 0;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
 }
@@ -231,6 +221,7 @@ input:checked~.navMenuContent {
 .additionalLinks .wrapper {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5%;
 }
 
 .additionalLinks {
@@ -255,8 +246,8 @@ input:checked~.navMenuContent {
     $marine: #042259;
     */
     filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto;
 }
 
@@ -278,7 +269,6 @@ input:checked~.navMenuContent {
     align-items: center;
 
     p,
-    input,
     .subButton {
         margin-top: 20px;
     }
@@ -291,19 +281,17 @@ input:checked~.navMenuContent {
         padding: 0;
         text-align: left;
         width: 100%;
+    }
 
-        input {
-            display: flex;
-            border-style: solid;
-            width: 100%;
-            border-color: $paleRose;
-            text-align: center;
-            height: 80px;
-            font-size: 1.3rem;
-        }
-
-
-
+    input {
+        margin-top: 20px;
+        display: flex;
+        border-style: solid;
+        width: 100%;
+        border-color: $paleRose;
+        text-align: center;
+        height: 80px;
+        font-size: 1.3rem;
     }
 }
 
@@ -335,7 +323,8 @@ input:checked~.navMenuContent {
     justify-content: space-between;
 
     h4 {
-        text-align: right;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -346,6 +335,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
 .line2::after,
 .line3::after,
 .line4::after {
+    line-break: strict;
     content: "\a";
     white-space: pre;
 }
