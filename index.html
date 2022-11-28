@@ -24,9 +24,18 @@
 			<div class="navMenuContainer">
 
 				<!-- all svg icons from: https://fontawesome.com/icons -->
-				<button class="navMenuButton">
+
+				<!-- trying navMenu clickable drop down by following:
+				https://stackoverflow.com/questions/44832572/pure-css-clickable-dropdown
+				-->
+				<input type="checkbox" id="check01" name="menu">
+				<label for="check01" class="navMenuButton">
 					<img src="./assets/bars-solid.svg" alt="dropdown menu icon">
-				</button>
+				</label>
+
+				<!-- <button class="navMenuButton">
+					<img src="./assets/bars-solid.svg" alt="dropdown menu icon">
+				</button> -->
 				<!-- currently none functioning. simply an image -->
 
 				<!-- flex container for Nav -->
@@ -44,7 +53,7 @@
 									<a href="#blog">Blog</a>
 								</li>
 								<li>
-									<a href="">Contact</a>
+									<a href="#contact">Contact</a>
 								</li>
 							</ul>
 						</nav>
@@ -164,6 +173,7 @@
 			<div class="wrapper">
 				<ul>
 					<li>
+						<!-- skipping url since it was not given. assuming this will be known/given in future assignment -->
 						<a href="">
 							<img class="svgIcons" src="./assets/car-solid.svg" alt="image link to shopping page">
 							<h5>shop</h5>
@@ -193,7 +203,7 @@
 					<p>Subscribe to our newsletter to stay updated.</p>
 					<!-- email + subscribe submit button form -->
 					<!-- from Module Zero notes -->
-					<form action="">
+					<form action="#" method="#" class="myForm" name="myForm">
 						<label for="emailAddress"></label>
 						<input type="text" id="emailAddress" name="emailAddress" placeholder="email address">
 						
