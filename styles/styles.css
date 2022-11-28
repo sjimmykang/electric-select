@@ -234,6 +234,8 @@ a,
 h1,
 h2,
 h3,
+h4,
+h5,
 p,
 button {
   margin: 0;
@@ -274,7 +276,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: 3rem;
   font-weight: 400;
   text-align: center;
   color: #1d81cc;
@@ -296,6 +298,15 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-weight: 400;
+  font-size: 2.56rem;
+  color: #1d81cc;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px auto;
+}
+
 nav li {
   font-family: "Catamaran", sans-serif;
   font-weight: 600;
@@ -312,14 +323,22 @@ p {
   letter-spacing: 0.01rem;
 }
 
-.bodyLinks {
-  font-weight: 400;
-  font-size: 1.56rem;
-  color: #1d81cc;
-  text-align: center;
-  text-transform: uppercase;
+@media (min-width: 801px) {
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #1d81cc;
+    text-transform: uppercase;
+  }
+  .aboutExtraTextContainer h2,
+.blogTextContainer h2 {
+    text-align: left;
+  }
+  h5 {
+    font-size: 1.56rem;
+  }
 }
-
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
 .wrapper {
@@ -379,7 +398,10 @@ header {
   thus you have to make that adjustment yourself.
   */
   background-image: url(../assets/header-alt-mobile.png);
-  background-size: cover;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #fcdde2;
   max-width: 1280px;
   height: 100vh;
 }
@@ -421,6 +443,16 @@ nav ul {
           filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
 }
 
+.about,
+.blog,
+.additionalLinks {
+  background-color: #fcdde2;
+}
+
+.galMobileCutOff {
+  display: none;
+}
+
 .aboutGalleryContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,15 +460,26 @@ nav ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .aboutGalleryContainer ul li {
-  width: 30%;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+}
+
+.galMobileCutOff {
+  display: none;
 }
 
 .aboutExtraContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .aboutExtraImgContainer {
@@ -450,7 +493,7 @@ nav ul {
   */
   -ms-flex-item-align: center;
       align-self: center;
-  width: 25%;
+  width: 100%;
 }
 
 .aboutExtraTextContainer {
@@ -461,10 +504,15 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 75%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   /*googled to find width property value of fit-content: 
   https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
   */
@@ -476,24 +524,26 @@ button {
   background-color: #042259;
   font-family: "Emblema One", cursive;
   font-weight: 400;
-  padding: 10px 20px;
+  font-size: 2rem;
+  padding: 25px 30px;
 }
 
-.blogPostContainer {
+.blogPostContainer1,
+.blogPostContainer2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .blogImgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 100%;
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -502,16 +552,38 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.pinkTheme {
-  color: #042259;
-  background-color: #f5c8cf;
+.blogTextWrapper1,
+.blogTextWrapper2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.additionalLinks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .svgIcons {
@@ -520,7 +592,9 @@ button {
   */
   -webkit-filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
           filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
-  width: 40px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 .copyRight p {
@@ -534,6 +608,8 @@ button {
   }
   header {
     background-image: url(../assets/header-alt.png);
+    background-size: cover;
+    background-position: right;
     height: 90vh;
   }
   .navMenuButton {
@@ -544,10 +620,105 @@ button {
     display: -ms-flexbox;
     display: flex;
   }
+  .blogImgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .blogTextContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .blogTextWrapper1 {
-    padding: 20% 10% 20% 20%;
+    padding: 10% 10% 10% 20%;
   }
   .blogTextWrapper2 {
-    padding: 20% 20% 20% 10%;
+    padding: 10% 20% 10% 10%;
+  }
+  .galMobileCutOff {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .aboutGalleryContainer ul li {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+  .blog {
+    background-color: #f0f5ff;
+  }
+  .blogPostContainer1 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .blogPostContainer2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutExtraContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .aboutExtraImgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 25%;
+  }
+  .aboutExtraTextContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 40px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 75%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    line-height: 1.45rem;
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  .pinkTheme {
+    color: #042259;
+    background-color: #f5c8cf;
+  }
+  .additionalLinks ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .svgIcons {
+    width: 50px;
+    height: 50px;
   }
 }

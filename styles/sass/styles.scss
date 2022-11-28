@@ -4,6 +4,8 @@
 @use "partials/variables" as *; 
 @use "partials/typography";
 
+//lightPink hexcode seem a lot darker than in example psd
+
 
 /* Setting up as Mobile first.
     Larger screen size will be accomodated with media queries. */
@@ -57,7 +59,10 @@ header {
     thus you have to make that adjustment yourself.
     */
     background-image: url(../assets/header-alt-mobile.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: $lightPink;
     max-width: 1280px;
     height: 100vh;
     
@@ -90,17 +95,34 @@ nav ul {
     filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
 }
 
+//lightPink background color used in about and additional link sections
+.about,
+.blog,
+.additionalLinks {
+    background-color: $lightPink;
+}
+
+.galMobileCutOff {
+    display: none;
+}
+
 .aboutGalleryContainer ul{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     li {
-        width: calc(30%);
+        flex-basis: 45%;
     }
 } 
 
+.galMobileCutOff {
+    display: none;
+}
+
 .aboutExtraContainer {
     display: flex;
+    flex-direction: column;
 }
 
 .aboutExtraImgContainer {
@@ -112,17 +134,18 @@ nav ul {
     this explained that flex container default on align-self is stretch. hence causing this issue
     */
     align-self: center;
-    width: 25%;
+    width: 100%;
 }
 
 .aboutExtraTextContainer {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    align-items: center;
 }
 
-//Read Me button styles
+//Read More button styles
 button {
+    display: flex;
     /*googled to find width property value of fit-content: 
     https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
     */
@@ -132,30 +155,41 @@ button {
     background-color: $marine;
     font-family: 'Emblema One', cursive;
     font-weight: 400;
-    padding: 10px 20px;
+    font-size: 2rem;
+    padding: 25px 30px;
 }
 
 //Blog section styles
-.blogPostContainer {
+.blogPostContainer1,
+.blogPostContainer2 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .blogImgContainer {
     display: flex;
-    width: 50%;
+    width: 100%;
     align-self: center;
 }
 
 .blogTextContainer {
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
 }
 
-.pinkTheme {
-    color: $marine;
-    background-color: $paleRose;
+.blogTextWrapper1,
+.blogTextWrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.additionalLinks ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // align-items: center;
 }
 
 .svgIcons {
@@ -163,8 +197,9 @@ button {
     $marine: #042259;
     */
     filter: invert(12%) sepia(24%) saturate(6421%) hue-rotate(210deg) brightness(89%) contrast(104%);
-    width: 40px;
-
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
 }
 
 //body link typography css in typography partial
@@ -174,6 +209,7 @@ button {
 }
 
 //-------------------- Media Queries ----------------------
+// typography media queries in the typography partial
 @media (min-width: 801px) {
 
     .wrapper {
@@ -183,6 +219,8 @@ button {
 
     header {
         background-image: url(../assets/header-alt.png);
+        background-size: cover;
+        background-position: right;
         height: 90vh;
     }
 
@@ -198,13 +236,87 @@ button {
     .navMenuContent {
         display: flex;
     }
+    .blogImgContainer {
+        display: flex;
+        width: 50%;
+        align-self: center;
+    }
+
+    .blogTextContainer {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+    }
+
 
     .blogTextWrapper1 {
-        padding: 20% 10% 20% 20%;
+        padding: 10% 10% 10% 20%;
     }
 
     .blogTextWrapper2 {
-        padding: 20% 20% 20% 10%;
+        padding: 10% 20% 10% 10%;
     }
 
+    .galMobileCutOff {
+        display: flex;
+    }
+    .aboutGalleryContainer ul {
+        li {
+            flex-basis: 30%;
+        }
+    } 
+
+    .blog {
+        background-color: $paleGrey;
+    }
+
+    .blogPostContainer1 {
+        flex-direction: row-reverse;
+    }
+    .blogPostContainer2 {
+        flex-direction: row;
+    }
+
+    .aboutExtraContainer {
+        flex-direction: row;
+    }
+
+    .aboutExtraImgContainer {
+        display: flex;
+        align-self: center;
+        width: 25%;
+    }
+
+    .aboutExtraTextContainer {
+        display: flex;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        align-items: flex-start;
+    }
+    
+
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        line-height: 1.45rem; //29px
+        align-self: baseline;
+    }
+
+    .pinkTheme {
+    color: $marine;
+    background-color: $paleRose;
+    }
+
+    
+    .additionalLinks ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .svgIcons {
+        width: 50px;
+        height: 50px;
+    }
 }

@@ -27,7 +27,7 @@ h1 {
 
 //Section Headings font styles
 h2 {
-    font-size: 2.1rem; //42px
+    font-size: 3rem;
     font-weight: 400;
     text-align: center;
     color: $waterBlue;
@@ -50,6 +50,16 @@ h4 {
     text-transform: uppercase;
 }
 
+//bodyLinks font styles
+h5 {
+    font-weight: 400;
+    font-size: 2.56rem; //31.2px
+    color: $waterBlue;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+
 //Nav font styles
 nav li {
     font-family: 'Catamaran', sans-serif;
@@ -67,12 +77,27 @@ p {
     letter-spacing: 0.01rem; //0.2px
 }
 
-.bodyLinks {
-    font-weight: 400;
-    font-size: 1.56rem; //31.2px
-    color: $waterBlue;
-    text-align: center;
-    text-transform: uppercase;
-}
 
 //button typography in main styles sheet
+
+
+//-------------------- Media Queries ----------------------
+@media (min-width: 801px) {
+
+    h2 {
+        font-size: 2.1rem; //42px
+        font-weight: 400;
+        text-align: center;
+        color: $waterBlue;
+        text-transform: uppercase;
+    }
+
+    .aboutExtraTextContainer h2,
+    .blogTextContainer h2 {
+        text-align: left;
+    }
+
+    h5 {
+        font-size: 1.56rem; //31.2px
+    }
+}
