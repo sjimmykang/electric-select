@@ -256,6 +256,8 @@ img {
   width: 100%;
 }
 
+/*Mobile first. the mobile size fonts have been adjusted for more comfortable viewing. PC typography strictly follows the style guide
+*/
 html {
   /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
   0.1rem is 2px */
@@ -329,6 +331,26 @@ a {
   color: #1f2022;
 }
 
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*googled to find width property value of fit-content: 
+  https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
+  */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  color: #fcdde2;
+  background-color: #042259;
+  font-family: "Emblema One", cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 25px 30px;
+  margin-top: 40px;
+}
+
 @media (min-width: 801px) {
   h2 {
     font-size: 2.1rem;
@@ -352,6 +374,10 @@ a {
   p {
     font-size: 1rem;
     line-height: 1.45rem;
+  }
+  .pinkTheme {
+    color: #042259;
+    background-color: #f5c8cf;
   }
 }
 /* Setting up as Mobile first.
@@ -529,26 +555,6 @@ nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /*googled to find width property value of fit-content: 
-  https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
-  */
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  text-transform: uppercase;
-  color: #fcdde2;
-  background-color: #042259;
-  font-family: "Emblema One", cursive;
-  font-weight: 400;
-  font-size: 2rem;
-  padding: 25px 30px;
-  margin-top: 40px;
 }
 
 .blogContainer {
@@ -919,10 +925,6 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     -ms-flex-item-align: baseline;
         align-self: baseline;
     margin-top: 15px;
-  }
-  .pinkTheme {
-    color: #042259;
-    background-color: #f5c8cf;
   }
   .additionalLinks {
     background-color: #fcdde2;

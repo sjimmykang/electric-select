@@ -142,23 +142,6 @@ nav ul {
     align-items: center;
 }
 
-//Read More button styles
-button {
-    display: flex;
-    /*googled to find width property value of fit-content: 
-    https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
-    */
-    width: fit-content;
-    text-transform: uppercase;
-    color: $lightPink;
-    background-color: $marine;
-    font-family: 'Emblema One', cursive;
-    font-weight: 400;
-    font-size: 2rem;
-    padding: 25px 30px;
-    margin-top: 40px;
-}
-
 //Blog section styles
 .blogContainer {
     padding-bottom: 20px;

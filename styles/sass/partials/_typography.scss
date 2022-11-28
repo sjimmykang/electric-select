@@ -1,14 +1,14 @@
 //variables partial is in the same level as this partial
 @use "variables" as *;
 
+/*Mobile first. the mobile size fonts have been adjusted for more comfortable viewing. PC typography strictly follows the style guide
+*/
+
 html {
     /* assuming browser default fontsize of 16px, 125% will make it 1rem is 20px.
     0.1rem is 2px */
     font-size: 125%;
 }
-
-// font-family: 'Barlow', sans-serif;
-// font-family: 'Catamaran', sans-serif;
 
 body {
     //Using EmblemaOne as base font. will specify less used fonts per use
@@ -45,6 +45,7 @@ h3 {
     color: $darkerGrey;
 }
 
+//Footer Headings/links font styles
 h4 {
     font-weight: 400;
     font-size: 2.5rem; //25px
@@ -63,7 +64,7 @@ h5 {
     margin: 20px auto;
 }
 
-//Nav font styles
+//Navigation Links font styles
 nav li {
     font-family: 'Catamaran', sans-serif;
     font-weight: 600; //semi bold
@@ -85,8 +86,22 @@ a {
 }
 
 
-//button typography in main styles sheet
-
+//button font styles
+button {
+    display: flex;
+    /*googled to find width property value of fit-content: 
+    https: //stackoverflow.com/questions/27722872/make-button-width-fit-to-the-text
+    */
+    width: fit-content;
+    text-transform: uppercase;
+    color: $lightPink;
+    background-color: $marine;
+    font-family: 'Emblema One', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 25px 30px;
+    margin-top: 40px;
+}
 
 //-------------------- Media Queries ----------------------
 @media (min-width: 801px) {
@@ -117,6 +132,12 @@ a {
     p {
         font-size: 1rem; //20px
         line-height: 1.45rem; //29px
+    }
+
+    // Change button theme to pink base
+    .pinkTheme {
+        color: $marine;
+        background-color: $paleRose;
     }
 
 }
