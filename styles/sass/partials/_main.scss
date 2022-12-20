@@ -143,6 +143,12 @@ input:checked~.navMenuContent {
     display: none;
 }
 
+.arrowKey {
+    width: 4rem;
+    display: flex;
+    filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
+}
+
 .aboutGalleryContainer {
     ul {
         display: flex;
