@@ -50,7 +50,10 @@
         }
     }
 
-    
+    // .arrowKey {
+    //     width: 3rem;
+    //     height: 3rem;
+    // }
 
     .navMediaContainer {
         padding: 14vh 0 0 0;
@@ -81,7 +84,7 @@
 
     .titleContainer {
         padding: 140px 0 0 0;
-        width: 40%;
+        width: 30%;
     }
 
     .navMenuContent {
@@ -138,15 +141,23 @@
         padding: 10% 20% 10% 10%;
     }
 
-    .galMobileCutOff {
+
+    .galleryMain {
+        flex-basis: 40%;
+    }
+
+    .gallerySub {
         display: flex;
+        flex-basis: 25%;
     }
 
     .aboutGalleryContainer {
+        height: 25vh;
         margin-top: 8%;
+        
+        ul {
+            justify-content: space-between;
 
-        li {
-            flex-basis: 31%;
         }
     }
 
@@ -258,10 +269,19 @@
     }
 }
 
-@media (min-width: 1041px) {
+@media (min-width: 1000px) {
     .line1::after,
     .line3::after {
         content: none;
         white-space: none;
+    }
+
+    .titleContainer {
+        padding: 140px 0 0 0;
+        width: 40%;
+    }
+
+    .aboutGalleryContainer {
+        height: 35vh;
     }
 }
