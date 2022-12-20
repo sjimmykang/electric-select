@@ -200,11 +200,11 @@ button {
 //Break point into desktop styles (pc)
 @media (min-width: 801px) {
     h1 {
-        font-size: 5.23rem; //104.6px
+        font-size: 4rem; 
     }
 
     h2 {
-        font-size: 2.1rem; //42px
+        font-size: 2rem;
         font-weight: 400;
  
         color: $waterBlue;
@@ -213,7 +213,7 @@ button {
     }
 
     h3 {
-        font-size: 1.86rem; //37.2px
+        font-size: 1.4rem;
     }
 
     .aboutExtraTextContainer h2,
@@ -258,4 +258,23 @@ button {
         background-color: $paleRose;
     }
 
+}
+
+@media (min-width: 1000px) {
+    h1 {
+            font-size: 5.23rem; //104.6px
+        }
+    
+        h2 {
+            font-size: 2.1rem; //42px
+            font-weight: 400;
+    
+            color: $waterBlue;
+            text-transform: uppercase;
+            padding: 0px 0 15px 0;
+        }
+    
+        h3 {
+            font-size: 1.86rem; //37.2px
+        }
 }

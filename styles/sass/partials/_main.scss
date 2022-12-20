@@ -139,31 +139,56 @@ input:checked~.navMenuContent {
     background-color: $lightPink;
 }
 
-.galMobileCutOff {
-    display: none;
-}
+// .gallOff {
+//     display: none;
+// }
+
+// .gallOn {
+//     display: flex;
+// }
 
 .arrowKey {
-    width: 4rem;
+    margin: 0 0.5rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
+    transition: filter 0.3s;
+
+    &:hover,
+    &focus {
+        filter: invert(15%) sepia(88%) saturate(4011%) hue-rotate(211deg) brightness(83%) contrast(96%);
+    }
+}
+
+.galleryMain {
+    flex-basis: 70%;
+    transition: flex-basis 0.5s;
+}
+
+.gallerySub {
+    display: none;
+    flex-basis: 35%;
+    align-self: center;
+    opacity: 0.6;
+    transition: flex-basis 0.5s;
 }
 
 .aboutGalleryContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
-    li {
-        flex-basis: 48%;
-    }
+    // li {
+    //     flex-basis: 48%;
+    // }
 }
 
-.galMobileCutOff {
-    display: none;
-}
 
 .aboutExtraContainer {
     padding-top: 100px;

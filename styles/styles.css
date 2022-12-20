@@ -256,6 +256,7 @@ img {
   width: 100%;
 }
 
+/* color for on hover/focus */
 /*Mobile first. the mobile size fonts have been adjusted for more comfortable viewing. PC typography strictly follows the style guide
 */
 html {
@@ -436,17 +437,17 @@ button {
 }
 @media (min-width: 801px) {
   h1 {
-    font-size: 5.23rem;
+    font-size: 4rem;
   }
   h2 {
-    font-size: 2.1rem;
+    font-size: 2rem;
     font-weight: 400;
     color: #1d81cc;
     text-transform: uppercase;
     padding: 0px 0 15px 0;
   }
   h3 {
-    font-size: 1.86rem;
+    font-size: 1.4rem;
   }
   .aboutExtraTextContainer h2,
 .blogTextContainer h2 {
@@ -482,6 +483,21 @@ button {
   .pinkTheme {
     color: #042259;
     background-color: #f5c8cf;
+  }
+}
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 5.23rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 400;
+    color: #1d81cc;
+    text-transform: uppercase;
+    padding: 0px 0 15px 0;
+  }
+  h3 {
+    font-size: 1.86rem;
   }
 }
 /* Setting up as Mobile first.
@@ -642,36 +658,67 @@ input:checked ~ .navMenuContent {
   background-color: #fcdde2;
 }
 
-.galMobileCutOff {
-  display: none;
-}
-
 .arrowKey {
-  width: 4rem;
+  margin: 0 0.5rem;
+  width: 3rem;
+  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
           filter: invert(36%) sepia(97%) saturate(723%) hue-rotate(173deg) brightness(96%) contrast(90%);
+  -webkit-transition: -webkit-filter 0.3s;
+  transition: -webkit-filter 0.3s;
+  transition: filter 0.3s;
+  transition: filter 0.3s, -webkit-filter 0.3s;
+}
+.arrowKey:hover, .arrowKeyfocus {
+  -webkit-filter: invert(15%) sepia(88%) saturate(4011%) hue-rotate(211deg) brightness(83%) contrast(96%);
+          filter: invert(15%) sepia(88%) saturate(4011%) hue-rotate(211deg) brightness(83%) contrast(96%);
 }
 
-.aboutGalleryContainer ul {
+.galleryMain {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  -webkit-transition: -webkit-flex-basis 0.5s;
+  transition: -webkit-flex-basis 0.5s;
+  transition: flex-basis 0.5s;
+  transition: flex-basis 0.5s, -webkit-flex-basis 0.5s, -ms-flex-preferred-size 0.5s;
+}
+
+.gallerySub {
+  display: none;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  opacity: 0.6;
+  -webkit-transition: -webkit-flex-basis 0.5s;
+  transition: -webkit-flex-basis 0.5s;
+  transition: flex-basis 0.5s;
+  transition: flex-basis 0.5s, -webkit-flex-basis 0.5s, -ms-flex-preferred-size 0.5s;
+}
+
+.aboutGalleryContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.aboutGalleryContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-.aboutGalleryContainer li {
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
-}
-
-.galMobileCutOff {
-  display: none;
 }
 
 .aboutExtraContainer {
@@ -1011,7 +1058,7 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   }
   .titleContainer {
     padding: 140px 0 0 0;
-    width: 40%;
+    width: 30%;
   }
   .navMenuContent {
     display: -webkit-box;
@@ -1069,17 +1116,24 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
   .blogTextWrapper2 {
     padding: 10% 20% 10% 10%;
   }
-  .galMobileCutOff {
+  .galleryMain {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+  .gallerySub {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
   .aboutGalleryContainer {
     margin-top: 8%;
   }
-  .aboutGalleryContainer li {
-    -ms-flex-preferred-size: 31%;
-        flex-basis: 31%;
+  .aboutGalleryContainer ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .blog {
     background-color: #f0f5ff;
@@ -1208,10 +1262,14 @@ https: //www.educative.io/answers/how-to-add-a-line-break-using-css
     padding: 10px 0;
   }
 }
-@media (min-width: 1041px) {
+@media (min-width: 1000px) {
   .line1::after,
 .line3::after {
     content: none;
     white-space: none;
+  }
+  .titleContainer {
+    padding: 140px 0 0 0;
+    width: 40%;
   }
 }

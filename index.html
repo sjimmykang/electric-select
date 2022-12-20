@@ -104,25 +104,27 @@
 				</div>
 
 				<!-- adding JS for gallery left right function -->
-				<div class="arrowKey">
-					<img src="./assets/caret-left-solid.svg" alt="">
-				</div>
 				<div class="aboutGalleryContainer">
+					<div class="arrowKey leftArrow">
+						<img src="./assets/caret-left-solid.svg" alt="previous image">
+					</div>
+
 					<ul>
-						<li>
-							<img src="./assets/gallery-photo-1.jpg" alt="new panasonic microwave">
+						<li class="galleryMain gallImage1">
+							<img class="GalleryMain" src="./assets/gallery-photo-1.jpg" alt="new panasonic microwave">
 						</li>
-						<li>
+						<li class="gallerySub gallImage2">
 							<img src="./assets/gallery-photo-2.jpg" alt="new magimix blender">
 						</li>
-						<li>
-							<img class="galMobileCutOff" src="./assets/gallery-photo-3.jpg" alt="new delonghi toaster">
+						<li class="gallerySub gallImage3">
+							<img src="./assets/gallery-photo-3.jpg" alt="new delonghi toaster">
 						</li>
 					</ul>
+
+					<div class="arrowKey rightArrow">
+						<img src="./assets/caret-right-solid.svg" alt="next image">
+					</div>
 				</div> <!-- end of img gallery -->
-				<div class="arrowKey">
-					<img src="./assets/caret-right-solid.svg" alt="">
-				</div>
 
 
 
@@ -260,5 +262,7 @@
 		</div>
 	</main>
 	
+	<!-- Gallery slider JS -->
+	<script src="./gallerySlider.js"></script>
 </body>
 </html>
