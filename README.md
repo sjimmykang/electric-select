@@ -1,6 +1,6 @@
 # junoAssignment01-jimmyKang
 
-[Live Link](https://sjimmykang-assignment01.netlify.app/)
+[Live Link](https://sjimmykang-electric-select.netlify.app/)
 
 changelog:  
 DEC-20-2022: added gallery feature with JS  
