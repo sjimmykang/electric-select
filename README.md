@@ -1,4 +1,4 @@
-# junoAssignment01-jimmyKang
+# Electric Select psd conversion site
 
 [Live Link](https://sjimmykang-electric-select.netlify.app/)
 
